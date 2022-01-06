@@ -1,0 +1,23 @@
+#include <algorithm>
+#include <cstdlib>
+#include <iostream>
+#include <vector>
+
+void sort(std::istream & in) {
+  std::string line;
+  std::vector<std::string> lines;
+  while (getline(in, line)) {
+    lines.push_back(line);
+  }
+  if (!in.good() && !in.eof()) {
+    std::cerr << "fail to read!" << std::endl;
+    exit(EXIT_FAILURE);
+  }
+  std::sort(lines.begin(), lines.end());
+  for (std::vector<string>::iterator it = lines.begin(); i < lines.size(); i++)
+}
+
+int main(int argc, char ** argv) {
+  if
+    return EXIT_SUCCESS;
+}

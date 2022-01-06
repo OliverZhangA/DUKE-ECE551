@@ -1,0 +1,71 @@
+#ifndef __INT_MATRIX_H___
+#define __INT_MATRIX_H___
+
+#include <assert.h>
+
+#include <iostream>
+#include <vector>
+template<typename T>
+class IntMatrix {
+ private:
+  int numRows;
+  int numColumns;
+  std::vector<std::vector<T> > rows;
+
+ public:
+  IntMatrix() {
+    numRows = 0;
+    numColumns = 0;
+    rows = new std::vector<std::vector<T> >;
+  }
+  IntMatrix(int r, int c) {
+    numRows = r;
+    numColumns = c;
+    rows = new std::vector<std::vector<T> >(r);
+  }
+  IntMatrix(const IntMatrix & rhs) {
+    numRows = rhs.numRows;
+    numColumns = rhs.numColumns;
+    rows = new std::vector<std::vector<T> >(numRows);
+  }
+  ~IntMatrix() { delete[] rows; }
+  IntMatrix & operator=(const IntMatrix & rhs) {
+    std::vector<std::vector<T> > temp = rows;
+    rows = new std::vector<std::vector<T> >(rhs.rows);
+    numRows = rhs.numRows;
+    numColumns = rhs.numColumns;
+    // for (int i = 0; i < rhs.numRows; i++) {
+    //   rows[i] = rhs.rows[i];
+    // }
+    delete[] temp;
+  }
+  int getRows() const {
+    return numRows;
+#include "IntArray.h" 5 #include < assert.h > 6 #include < iostream > 7class IntMatrix {
+      8 private : 9 int numRows;
+      10 int numColumns;
+      11 IntArray ** rows;
+      12 public : 13 IntMatrix();
+      14 IntMatrix(int r, int c);
+      15 IntMatrix(const IntMatrix & rhs);
+      16 ~IntMatrix();
+      17 IntMatrix & operator=(const IntMatrix & rhs);
+      18 int getRows() const;
+      19 int getColumns() const;
+      20 const IntArray & operator[](int index) const;
+      21 IntArray & operator[](int index);
+      22 bool operator==(const IntMatrix & rhs) const;
+      23 IntMatrix operator+(const IntMatrix & rhs) const;
+      24 25 26
+    };
+    27 28 29std ::ostream & operator<<(std::ostream & s, const IntMatrix & rhs);
+  }
+  int getColumns() const;
+  const std::vector<T> & operator[](int index) const { return rows[index]; }
+  std::vector<T> & operator[](int index) { return rows[index]; }
+  bool operator==(const IntMatrix & rhs) const;
+  IntMatrix operator+(const IntMatrix & rhs) const;
+};
+
+std::ostream & operator<<(std::ostream & s, const IntMatrix & rhs);
+#endif

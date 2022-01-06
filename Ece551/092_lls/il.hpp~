@@ -1,0 +1,52 @@
+#ifndef __LL_HPP__
+#define __LL_HPP__
+
+#include <assert.h>
+
+#include <cstdlib>
+#include <exception>
+class Tester;
+
+template<typename T>
+class LinkedList {
+ public:
+  class Node {
+   public:
+    T data;
+    Node * next;
+    Node * prev;
+    Node() : next(NULL), prev(NULL){};
+    Node(T d, Node * n, Node * p) : data(d), next(n), prev(p){};
+  };
+  Node * head;
+  Node * tail;
+
+ public:
+  LinkedList() : head(NULL), tail(NULL){};
+  LinkedList(const LinkedList & rhs) { Node ** curr = head; }
+  IntList & operator=(const IntList & rhs);
+  ~IntList();
+  void addFront(const T & item) {
+    if (head == NULL && tail == NULL) {
+      head = new Node(item, NULL, NULL);
+      tail = head;
+    }
+    head = new Node(item, head, NULL);
+  }
+  void addBack(const int & item) {
+    if (head == NULL && tail == NULL) {
+      head = new Node(item, NULL, NULL);
+      tail = head;
+    }
+    tail->next = new Node(item, NULL, tail);
+    tail = tail->next;
+  }
+  bool remove(const int & item);
+  int & operator[](int index);
+  const int & operator[](int index) const;
+  int find(const int & item);
+  int getSize() const;
+  friend Tester;
+};
+
+#endif

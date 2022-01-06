@@ -1,0 +1,10 @@
+#include <assert.h>
+
+#include "cyoa.hpp"
+int main(int argc, char ** argv) {
+  assert(argc == 2);
+  //creata a page object and initialize it with the file
+  story::Page page1(argv[1]);
+  page1.printpage();
+  return EXIT_SUCCESS;
+}

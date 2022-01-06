@@ -1,0 +1,7 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(void) {
+  char a[] = "abc\0";
+  printf("%s", a);
+  return EXIT_SUCCESS;
+}

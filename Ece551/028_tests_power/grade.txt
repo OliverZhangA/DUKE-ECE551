@@ -1,0 +1,66 @@
+Grading at 09/07/2021:00:51:51.138364
+For commit ID 4463a3a6ddd54588127d3bce08c9d53f7a3d4620
+Grading at Mon Sep  6 20:51:50 EDT 2021
+**Testing broken implementation 10 **
+-------------------------------------
+
+output is 2 but expected ans is 8 
+
+**Testing broken implementation 11 **
+-------------------------------------
+
+output is 1 but expected ans is 1993115841 
+
+**Testing broken implementation 1 **
+-------------------------------------
+
+output is 2 but expected ans is 8 
+
+**Testing broken implementation 2 **
+-------------------------------------
+
+output is 0 but expected ans is 1 
+
+**Testing broken implementation 3 **
+-------------------------------------
+
+output is 0 but expected ans is 1 
+
+**Testing broken implementation 4 **
+-------------------------------------
+
+output is 35009 but expected ans is 1993115841 
+
+**Testing broken implementation 5 **
+-------------------------------------
+
+output is 0 but expected ans is 8 
+
+**Testing broken implementation 6 **
+-------------------------------------
+
+output is 0 but expected ans is 1993115841 
+
+**Testing broken implementation 7 **
+-------------------------------------
+
+output is 27 but expected ans is 8 
+
+**Testing broken implementation 8 **
+-------------------------------------
+
+output is 6 but expected ans is 8 
+
+**Testing broken implementation 9 **
+-------------------------------------
+
+output is 0 but expected ans is 8 
+
+**Testing correct implementation **
+-------------------------------------
+
+you are good
+All tests were ok.
+
+
+Overall Grade: PASSED

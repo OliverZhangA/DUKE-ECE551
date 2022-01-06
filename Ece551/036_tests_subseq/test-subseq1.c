@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+size_t maxSeq(int * array, size_t n);
+
+int main(void) {
+  int arr1[] = {1, 2, 1, 2, 3, 4, 5, 6, 3, 4, 1, 2, 3, 4, 5};
+  int arr2[] = {1, 2, 1, 3, 5, 7, 2, 4, 6, 8, 11};
+  int arr3[] = {1, 1, 1, 1, 1};
+  int arr4[15] = {-2, -1, 0, 0, 5, 3, 4, 5};
+  int arr5[10] = {-5, -4, -3, -2, -1, -1, 1, 2, 3, 4};
+  int arr6[7] = {1, 2, 3, 2, 3, 4, 5};
+  int arr7[] = {1, 2, 1, 3, 5, 7, 2, 4, 6, 9, 10};
+  int arr8[] = {0};
+  int arr9[] = {5, 4, 3, 2, 1};
+  int arr14[] = {-2, 2};
+  if (maxSeq(arr1, 15) == 6 && maxSeq(arr2, 11) == 5 && maxSeq(arr3, 5) == 1 &&
+      maxSeq(arr4, 15) == 3 && maxSeq(arr5, 10) == 5 && maxSeq(arr6, 7) == 4 &&
+      maxSeq(arr7, 11) == 5 && maxSeq(arr8, 1) == 1 && maxSeq(arr9, 0) == 0 &&
+      maxSeq(arr14, 2) == 2) {
+    printf("you are good\n");
+    return EXIT_SUCCESS;
+  }
+  else {
+    return EXIT_FAILURE;
+  }
+}

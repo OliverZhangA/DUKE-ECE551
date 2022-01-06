@@ -1,0 +1,17 @@
+#success
+cyoa-step3 success7
+cyoa-step1 page1.txt
+cyoa-step2 success3 < input2.txt
+cyoa-step4 story1
+cyoa-step4 winnr
+cyoa-step4 weirdstory
+cyoa-step4 unreachable
+#error
+cyoa-step1 fail1/page1.txt
+cyoa-step1 fail2/page1.txt
+cyoa-step1 page1blankline.txt
+cyoa-step1 fail2/page2.txt
+cyoa-step2 fail3 < input2.txt
+cyoa-step2 fail4 < input2.txt
+cyoa-step2 fail5 < input2.txt
+cyoa-step3 success6

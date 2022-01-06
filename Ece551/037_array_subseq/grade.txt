@@ -1,0 +1,19 @@
+Grading at 09/14/2021:01:56:29.366575
+For commit ID 4594975c750acd835a1366fb73b118a050e9660b
+Grading at Mon Sep 13 21:56:29 EDT 2021
+Attempting to compile maxSeq.c 
+Linking your object file with our test main
+#################################################
+testcase2:
+array size:0 was Correct
+#################################################
+testcase3:
+array size:1 was Correct
+#################################################
+testcase4:
+array size:100 was Correct
+#################################################
+testcase5:
+array size:5000 was Correct
+
+Overall Grade: A

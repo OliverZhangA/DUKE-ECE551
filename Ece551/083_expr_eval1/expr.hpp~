@@ -1,0 +1,8 @@
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+
+#include <cstdlib>
+class Expression {
+  std::string toString() const = 0;
+};

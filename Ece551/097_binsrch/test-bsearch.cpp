@@ -1,0 +1,82 @@
+#include <assert.h>
+#include <math.h>
+#include <stdio.h>
+
+#include <cstdlib>
+
+#include "function.h"
+int binarySearchForZero(Function<int, int> * f, int low, int high);
+class CountedIntFn : public Function<int, int> {
+ protected:
+  unsigned remaining;
+  Function<int, int> * f;
+  const char * mesg;
+
+ public:
+  CountedIntFn(unsigned n, Function<int, int> * fn, const char * m) :
+      remaining(n),
+      f(fn),
+      mesg(m) {}
+  virtual int invoke(int arg) {
+    if (remaining == 0) {
+      printf("%d/n", arg);
+      fprintf(stderr, "Too many function invocations in %s\n", mesg);
+      exit(EXIT_FAILURE);
+    }
+    remaining--;
+    return f->invoke(arg);
+  }
+};
+
+class linear : public Function<int, int> {
+ public:
+  virtual int invoke(int arg) { return arg; }
+};
+
+class square : public Function<int, int> {
+ public:
+  virtual int invoke(int arg) { return arg * arg; }
+};
+
+class SinFunction : public Function<int, int> {
+ public:
+  virtual int invoke(int arg) { return 10000000 * (sin(arg / 100000.0) - 0.5); }
+};
+
+void check(Function<int, int> * f,
+           int low,
+           int high,
+           int expected_ans,
+           const char * mesg) {
+  int invoketimes = 0;
+  if (high > low) {
+    invoketimes = log2(high - low) + 1;
+  }
+  else {
+    invoketimes = 1;
+  }
+  CountedIntFn test(invoketimes, f, mesg);
+  assert(binarySearchForZero(&test, low, high) == expected_ans);
+}
+
+int main() {
+  linear funca;
+  check(&funca, 0, 0, 0, "linear function");
+  check(&funca, -9, -1, -2, "linear function");
+  check(&funca, 0, 9, 0, "linear function");
+  check(&funca, -1, 890, 0, "linear function");
+  check(&funca, -4, 3, 0, "linear function");
+  check(&funca, 1, 5, 1, "linear function");
+  check(&funca, -5, -1, -2, "linear function");
+  check(&funca, -280912839, 2, 0, "linear function");
+  check(&funca, 2, 1312, 2, "linear function");
+  check(&funca, 0, 1312, 0, "linear function");
+  check(&funca, -22, 0, -1, "linear function");
+  SinFunction funcb;
+  check(&funcb, 0, 150000, 52359, "sin function");
+  check(&funcb, 0, 0, 0, "sin function");
+  check(&funcb, -150000, 150000, 52359, "sin function");
+  square funcc;
+  check(&funcc, -150000, 150000, 0, "sin function");
+  return EXIT_SUCCESS;
+}
