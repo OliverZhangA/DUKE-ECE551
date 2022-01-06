@@ -1,0 +1,6 @@
+#include <stdlib.h>
+int main(void) {
+  int * p = malloc(24);
+  free(p);
+  return EXIT_SUCCESS;
+}

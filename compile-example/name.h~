@@ -1,0 +1,5 @@
+#ifndef NAME_H
+#define NMAE_H
+
+const char * getMyName();
+#endif

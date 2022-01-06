@@ -1,0 +1,8 @@
+#!/bin/bash
+variable = "hello world"
+echo $variable
+
+for i in onefish twofish redfish
+do
+    echo "current fish is $i"
+done

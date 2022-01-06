@@ -1,0 +1,29 @@
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+double helper(double d, double lo, double hi, double guess);
+
+double mySqrt(double d) {
+  double lo = 0;
+  double hi = d;
+  double guess = d / 2;
+  return helper(d, lo, hi, guess);
+}
+
+double helper(double d, double lo, double hi, double guess) {
+  if (fabs(guess * guess - d) <= 0.000001) {
+    return guess;
+  }
+  else if (guess * guess > d) {
+    return helper(d, lo, guess, (guess - lo) / 2 + lo);
+  }
+  else if (guess * guess < d) {
+    return helper(d, guess, hi, (hi - guess) / 2 + guess);
+  }
+  return guess;
+}
+
+int main(void) {
+  printf("%f", mySqrt(25));
+}

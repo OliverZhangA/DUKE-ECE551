@@ -1,0 +1,128 @@
+./isPrime-broken4 -993
+./isPrime-broken4 -9
+./isPrime-correct -99
+git add input.*
+ls
+cd ..
+cd ..
+cd ece551/
+ls
+cd 023_testing1/
+ls
+git add input.*
+ls
+git commit -m "023"
+git push
+ls
+grade 023_testing1
+view-grades 
+git pull
+ls
+cd ..
+ls
+status
+git pull
+ls
+cd 024_testing2/
+ls
+cat README 
+ls
+./bashtest.sh
+./bashtest.sh
+chomd u+x bashtest.sh
+chmod u+x bashtest.sh
+./bashtest.sh 
+bash
+ls
+./run_all.sh 
+ls
+cat README 
+head README 
+head 20 README 
+head README -20
+head -20 README 
+head 30
+head -30 README 
+ls
+head -40 README 
+head -50 README 
+head -60 README 
+head -70 R
+head -70 README 
+head -80 README 
+head -90 README 
+head -100 README 
+cat README 
+head 20
+head -20 README 
+head -50
+head -50 README 
+git add answers.txt 
+git commit -m "026"
+git push
+grade 026_ch07_rq
+view-grades 
+head -80 README
+head -100 README
+head -120 README
+head -150 README
+head -140 README
+head -160 README
+head -180 README
+tail README
+tail -50 README
+git add answers.txt 
+git commit -m "030"
+git push
+grade 030_ch08_rq
+view-grades 
+view-grades 
+view-grades 
+view-grades 
+cat README 
+cat next-README 
+ls
+./run_all.sh 
+./run_all.sh 
+./run_all.sh 
+cat next-README 
+./test-subseq
+./run_all.sh 
+./run_all.sh 
+./run_all.sh 
+./run_all.sh 
+./run_all.sh 
+./run_all.sh 
+./test-subseq
+./run_all.sh 
+./run_all.sh 
+./run_all.sh 
+./run_all.sh 
+./run_all.sh 
+cat README 
+./run_all.sh 
+./run_all.sh 
+./run_all.sh 
+cat README 
+./run_all.sh 
+./run_all.sh 
+./run_all.sh 
+./run_all.sh 
+./r
+./run_all.sh 
+./run_all.sh 
+./run_all.sh 
+./run_all.sh 
+./run_all.sh 
+ls
+./run_all.sh 
+./run_all.sh 
+./run_all.sh 
+./run_all.sh 
+./run_all.sh 
+./run_all.sh 
+./run_all.sh 
+ls
+ls
+cat README 
+cat README 
